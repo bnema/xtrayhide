@@ -1,0 +1,11 @@
+[Unit]
+Description=Hide X11 tray icons and bridge to SNI
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/xtrayhide
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target
